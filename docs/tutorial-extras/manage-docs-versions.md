@@ -2,30 +2,30 @@
 sidebar_position: 1
 ---
 
-# Manage Docs Versions
+# Gerencie versões da documentação
 
-Docusaurus can manage multiple versions of your docs.
+O Docusaurus pode gerenciar múltiplas versões da sua documentação.
 
-## Create a docs version
+## Crie uma versão dos docs
 
-Release a version 1.0 of your project:
+Publique a versão 1.0 do seu projeto:
 
 ```bash
 npm run docusaurus docs:version 1.0
 ```
 
-The `docs` folder is copied into `versioned_docs/version-1.0` and `versions.json` is created.
+A pasta `docs` será copiada para `versioned_docs/version-1.0` e `versions.json` será criado.
 
-Your docs now have 2 versions:
+Sua documentação agora terá 2 versões:
 
-- `1.0` at `http://localhost:3000/docs/` for the version 1.0 docs
-- `current` at `http://localhost:3000/docs/next/` for the **upcoming, unreleased docs**
+- `1.0` em `http://localhost:3000/docs/` para os docs da versão 1.0
+- `current` em `http://localhost:3000/docs/next/` para a **documentação futura, ainda não lançada**
 
-## Add a Version Dropdown
+## Adicione um seletor de versão
 
-To navigate seamlessly across versions, add a version dropdown.
+Para navegar entre versões, adicione um seletor de versões.
 
-Modify the `docusaurus.config.js` file:
+Modifique o arquivo `docusaurus.config.js`:
 
 ```js title="docusaurus.config.js"
 export default {
@@ -43,13 +43,13 @@ export default {
 };
 ```
 
-The docs version dropdown appears in your navbar:
+O seletor de versão aparecerá na sua navbar:
 
 ![Docs Version Dropdown](./img/docsVersionDropdown.png)
 
-## Update an existing version
+## Atualize uma versão existente
 
-It is possible to edit versioned docs in their respective folder:
+É possível editar documentos versionados em suas respectivas pastas:
 
-- `versioned_docs/version-1.0/hello.md` updates `http://localhost:3000/docs/hello`
-- `docs/hello.md` updates `http://localhost:3000/docs/next/hello`
+- `versioned_docs/version-1.0/hello.md` atualiza `http://localhost:3000/docs/hello`
+- `docs/hello.md` atualiza `http://localhost:3000/docs/next/hello`

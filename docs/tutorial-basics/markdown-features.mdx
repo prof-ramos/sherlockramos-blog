@@ -2,13 +2,13 @@
 sidebar_position: 4
 ---
 
-# Markdown Features
+# Recursos de Markdown
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+O Docusaurus suporta **[Markdown](https://daringfireball.net/projects/markdown/syntax)** e alguns **recursos adicionais**.
 
 ## Front Matter
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
+Documentos Markdown possuem metadados no topo chamados de [Front Matter](https://jekyllrb.com/docs/front-matter/):
 
 ```text title="my-doc.md"
 // highlight-start
@@ -20,30 +20,30 @@ slug: /my-custom-url
 ---
 // highlight-end
 
-## Markdown heading
+## Título em Markdown
 
-Markdown text with [links](./hello.md)
+Texto em Markdown com [links](./hello.md)
 ```
 
 ## Links
 
-Regular Markdown links are supported, using url paths or relative file paths.
+Links Markdown comuns são suportados, usando caminhos de URL ou caminhos de arquivos relativos.
 
 ```md
-Let's see how to [Create a page](/create-a-page).
+Vamos ver como [Criar uma página](/create-a-page).
 ```
 
 ```md
-Let's see how to [Create a page](./create-a-page.md).
+Vamos ver como [Criar uma página](./create-a-page.md).
 ```
 
-**Result:** Let's see how to [Create a page](./create-a-page.md).
+**Resultado:** Vamos ver como [Criar uma página](./create-a-page.md).
 
-## Images
+## Imagens
 
-Regular Markdown images are supported.
+Imagens comuns em Markdown são suportadas.
 
-You can use absolute paths to reference images in the static directory (`static/img/docusaurus.png`):
+Você pode usar caminhos absolutos para referenciar imagens no diretório `static` (`static/img/docusaurus.png`):
 
 ```md
 ![Docusaurus logo](/img/docusaurus.png)
@@ -51,15 +51,15 @@ You can use absolute paths to reference images in the static directory (`static/
 
 ![Docusaurus logo](/img/docusaurus.png)
 
-You can reference images relative to the current file as well. This is particularly useful to colocate images close to the Markdown files using them:
+Você também pode referenciar imagens de forma relativa ao arquivo atual. Isso é útil para manter imagens próximas aos arquivos Markdown que as usam:
 
 ```md
 ![Docusaurus logo](./img/docusaurus.png)
 ```
 
-## Code Blocks
+## Blocos de código
 
-Markdown code blocks are supported with Syntax highlighting.
+Blocos de código em Markdown são suportados com destaque de sintaxe.
 
 ````md
 ```jsx title="src/components/HelloDocusaurus.js"
@@ -75,39 +75,39 @@ function HelloDocusaurus() {
 }
 ```
 
-## Admonitions
+## Admoestações
 
-Docusaurus has a special syntax to create admonitions and callouts:
+O Docusaurus possui uma sintaxe especial para criar admoestações e callouts:
 
 ```md
-:::tip My tip
+:::tip Minha dica
 
-Use this awesome feature option
+Use esta opção de recurso incrível
 
 :::
 
-:::danger Take care
+:::danger Tome cuidado
 
-This action is dangerous
+Esta ação é perigosa
 
 :::
 ```
 
-:::tip My tip
+:::tip Minha dica
 
-Use this awesome feature option
-
-:::
-
-:::danger Take care
-
-This action is dangerous
+Use esta opção de recurso incrível
 
 :::
 
-## MDX and React Components
+:::danger Tome cuidado
 
-[MDX](https://mdxjs.com/) can make your documentation more **interactive** and allows using any **React components inside Markdown**:
+Esta ação é perigosa
+
+:::
+
+## MDX e Componentes React
+
+O [MDX](https://mdxjs.com/) pode tornar sua documentação mais **interativa** e permite usar **componentes React dentro do Markdown**:
 
 ```jsx
 export const Highlight = ({children, color}) => (
@@ -120,15 +120,15 @@ export const Highlight = ({children, color}) => (
       cursor: 'pointer',
     }}
     onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`)
+      alert(`Você clicou na cor ${color} com o rótulo ${children}`)
     }}>
     {children}
   </span>
 );
 
-This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+Este é o <Highlight color="#25c2a0">verde do Docusaurus</Highlight>!
 
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+Este é o <Highlight color="#1877F2">azul do Facebook</Highlight>!
 ```
 
 export const Highlight = ({children, color}) => (
@@ -141,12 +141,12 @@ export const Highlight = ({children, color}) => (
       cursor: 'pointer',
     }}
     onClick={() => {
-      alert(`You clicked the color ${color} with label ${children}`);
+      alert(`Você clicou na cor ${color} com o rótulo ${children}`);
     }}>
     {children}
   </span>
 );
 
-This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+Este é o <Highlight color="#25c2a0">verde do Docusaurus</Highlight>!
 
-This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+Este é o <Highlight color="#1877F2">azul do Facebook</Highlight>!

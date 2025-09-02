@@ -2,30 +2,30 @@
 sidebar_position: 5
 ---
 
-# Deploy your site
+# Faça o deploy do seu site
 
-Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
+O Docusaurus é um **gerador de site estático** (também chamado de **[Jamstack](https://jamstack.org/)**).
 
-It builds your site as simple **static HTML, JavaScript and CSS files**.
+Ele compila seu site como **arquivos estáticos de HTML, JavaScript e CSS**.
 
-## Build your site
+## Faça o build do site
 
-Build your site **for production**:
+Gere seu site **para produção**:
 
 ```bash
 npm run build
 ```
 
-The static files are generated in the `build` folder.
+Os arquivos estáticos são gerados na pasta `build`.
 
-## Deploy your site
+## Publique seu site
 
-Test your production build locally:
+Teste seu build de produção localmente:
 
 ```bash
 npm run serve
 ```
 
-The `build` folder is now served at [http://localhost:3000/](http://localhost:3000/).
+A pasta `build` será servida em [http://localhost:3000/](http://localhost:3000/).
 
-You can now deploy the `build` folder **almost anywhere** easily, **for free** or very small cost (read the **[Deployment Guide](https://docusaurus.io/docs/deployment)**).
+Agora você pode publicar a pasta `build` **quase em qualquer lugar**, com facilidade e **gratuitamente** ou a custo muito baixo (leia o **[Guia de Deploy](https://docusaurus.io/docs/deployment)**).

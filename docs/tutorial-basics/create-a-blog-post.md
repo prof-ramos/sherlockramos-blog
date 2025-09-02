@@ -2,13 +2,13 @@
 sidebar_position: 3
 ---
 
-# Create a Blog Post
+# Crie um Post no Blog
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+O Docusaurus cria uma **página para cada post**, além de uma **página índice do blog**, **sistema de tags** e feed **RSS**...
 
-## Create your first Post
+## Crie seu primeiro post
 
-Create a file at `blog/2021-02-28-greetings.md`:
+Crie um arquivo em `blog/2021-02-28-greetings.md`:
 
 ```md title="blog/2021-02-28-greetings.md"
 ---
@@ -26,9 +26,9 @@ authors:
 tags: [greetings]
 ---
 
-Congratulations, you have made your first post!
+Parabéns, você criou seu primeiro post!
 
-Feel free to play around and edit this post as much as you like.
+Sinta-se à vontade para experimentar e editar este post como quiser.
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+Um novo post do blog estará disponível em [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
