@@ -2,17 +2,17 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# Crie um Documento
 
-Documents are **groups of pages** connected through:
+Documentos são **grupos de páginas** conectadas por:
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+- uma **sidebar**
+- **navegação anterior/próximo**
+- **versionamento**
 
-## Create your first Doc
+## Crie seu primeiro doc
 
-Create a Markdown file at `docs/hello.md`:
+Crie um arquivo Markdown em `docs/hello.md`:
 
 ```md title="docs/hello.md"
 # Hello
@@ -20,13 +20,13 @@ Create a Markdown file at `docs/hello.md`:
 This is my **first Docusaurus document**!
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+Um novo documento estará disponível em [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
 
-## Configure the Sidebar
+## Configure a Sidebar
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
+O Docusaurus **cria automaticamente uma sidebar** a partir da pasta `docs`.
 
-Add metadata to customize the sidebar label and position:
+Adicione metadados para customizar o rótulo e a posição na sidebar:
 
 ```md title="docs/hello.md" {1-4}
 ---
@@ -39,7 +39,7 @@ sidebar_position: 3
 This is my **first Docusaurus document**!
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+Também é possível criar a sidebar explicitamente em `sidebars.js`:
 
 ```js title="sidebars.js"
 export default {

@@ -2,22 +2,22 @@
 sidebar_position: 6
 ---
 
-# Congratulations!
+# Parabéns!
 
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
+Você acabou de aprender o **básico do Docusaurus** e fez algumas alterações no **template inicial**.
 
-Docusaurus has **much more to offer**!
+O Docusaurus tem **muito mais a oferecer**!
 
-Have **5 more minutes**? Take a look at **[versioning](../tutorial-extras/manage-docs-versions.md)** and **[i18n](../tutorial-extras/translate-your-site.md)**.
+Tem **mais 5 minutos**? Veja **[versionamento](../tutorial-extras/manage-docs-versions.md)** e **[i18n](../tutorial-extras/translate-your-site.md)**.
 
-Anything **unclear** or **buggy** in this tutorial? [Please report it!](https://github.com/facebook/docusaurus/discussions/4610)
+Algo **confuso** ou **com bug** neste tutorial? [Avise-nos!](https://github.com/facebook/docusaurus/discussions/4610)
 
-## What's next?
+## O que vem a seguir?
 
-- Read the [official documentation](https://docusaurus.io/)
-- Modify your site configuration with [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
-- Add navbar and footer items with [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration)
-- Add a custom [Design and Layout](https://docusaurus.io/docs/styling-layout)
-- Add a [search bar](https://docusaurus.io/docs/search)
-- Find inspirations in the [Docusaurus showcase](https://docusaurus.io/showcase)
-- Get involved in the [Docusaurus Community](https://docusaurus.io/community/support)
+- Leia a [documentação oficial](https://docusaurus.io/)
+- Modifique a configuração do site com [`docusaurus.config.js`](https://docusaurus.io/docs/api/docusaurus-config)
+- Adicione itens no menu e rodapé com [`themeConfig`](https://docusaurus.io/docs/api/themes/configuration)
+- Personalize [Design e Layout](https://docusaurus.io/docs/styling-layout)
+- Adicione uma [barra de busca](https://docusaurus.io/docs/search)
+- Busque inspirações no [showcase do Docusaurus](https://docusaurus.io/showcase)
+- Participe da [Comunidade Docusaurus](https://docusaurus.io/community/support)
