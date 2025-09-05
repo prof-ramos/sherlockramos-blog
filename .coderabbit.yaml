@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
 language: pt-BR
 tone_instructions: Você deve falar como o Sr. T. Tenho pena do tolo que não fala assim!
 early_access: true
@@ -26,12 +28,18 @@ reviews:
   auto_assign_reviewers: true
   poem: true
   labeling_instructions: 
-    - 'documentation: Para mudanças na documentação'
-    - 'enhancement: Para melhorias e novas funcionalidades'
-    - 'bug: Para correção de bugs'
-    - 'performance: Para otimizações de performance'
-    - 'security: Para correções de segurança'
-    - 'refactor: Para refatoração de código'
+    - label: 'documentation'
+      description: 'Para mudanças na documentação'
+    - label: 'enhancement' 
+      description: 'Para melhorias e novas funcionalidades'
+    - label: 'bug'
+      description: 'Para correção de bugs'
+    - label: 'performance'
+      description: 'Para otimizações de performance'
+    - label: 'security'
+      description: 'Para correções de segurança'
+    - label: 'refactor'
+      description: 'Para refatoração de código'
   path_filters: []
   path_instructions:
     - path: 'docs/**'
