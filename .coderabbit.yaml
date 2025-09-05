@@ -3,16 +3,16 @@ tone_instructions: Você deve falar como o Sr. T. Tenho pena do tolo que não fa
 early_access: true
 enable_free_tier: true
 reviews:
-  profile: chill
-  request_changes_workflow: false
+  profile: assertive
+  request_changes_workflow: true
   high_level_summary: true
   high_level_summary_placeholder: ' @coderabbitai summary'
-  high_level_summary_in_walkthrough: false
+  high_level_summary_in_walkthrough: true
   auto_title_placeholder: ' @coderabbitai'
-  auto_title_instructions: ''
+  auto_title_instructions: 'Crie um título descritivo e conciso em português brasileiro'
   review_status: true
   commit_status: true
-  fail_commit_status: false
+  fail_commit_status: true
   collapse_walkthrough: false
   changed_files_summary: true
   sequence_diagrams: true
@@ -21,22 +21,36 @@ reviews:
   related_issues: true
   related_prs: true
   suggested_labels: true
-  auto_apply_labels: false
+  auto_apply_labels: true
   suggested_reviewers: true
-  auto_assign_reviewers: false
+  auto_assign_reviewers: true
   poem: true
-  labeling_instructions: []
+  labeling_instructions: 
+    - 'documentation: Para mudanças na documentação'
+    - 'enhancement: Para melhorias e novas funcionalidades'
+    - 'bug: Para correção de bugs'
+    - 'performance: Para otimizações de performance'
+    - 'security: Para correções de segurança'
+    - 'refactor: Para refatoração de código'
   path_filters: []
-  path_instructions: []
+  path_instructions:
+    - path: 'docs/**'
+      instructions: 'Foque na clareza da documentação, ortografia e estrutura em português brasileiro'
+    - path: 'blog/**'
+      instructions: 'Revise gramática, estilo e SEO dos posts em português brasileiro'
+    - path: 'src/**'
+      instructions: 'Analise performance, acessibilidade e melhores práticas React'
+    - path: '*.json'
+      instructions: 'Valide estrutura JSON e configurações'
   abort_on_close: true
   disable_cache: false
   auto_review:
     enabled: true
     auto_incremental_review: true
-    ignore_title_keywords: []
-    labels: []
-    drafts: false
-    base_branches: []
+    ignore_title_keywords: ['WIP', 'Draft', 'Rascunho']
+    labels: ['needs-review']
+    drafts: true
+    base_branches: ['main', 'master', 'develop']
   finishing_touches:
     docstrings:
       enabled: true
@@ -44,15 +58,15 @@ reviews:
       enabled: true
   pre_merge_checks:
     docstrings:
-      mode: warning
-      threshold: 80
+      mode: error
+      threshold: 90
     title:
-      mode: warning
-      requirements: ''
+      mode: error
+      requirements: 'Título deve ser descritivo e em português brasileiro'
     description:
-      mode: warning
+      mode: error
     issue_assessment:
-      mode: warning
+      mode: error
   tools:
     ast-grep:
       rule_dirs: []
@@ -145,31 +159,83 @@ chat:
   auto_reply: true
   integrations:
     jira:
-      usage: auto
+      usage: enabled
     linear:
-      usage: auto
+      usage: enabled
+    slack:
+      enabled: true
+    discord:
+      enabled: true
 knowledge_base:
   opt_out: false
   web_search:
     enabled: true
   code_guidelines:
     enabled: true
-    filePatterns: []
+    filePatterns: ['**/*.md', '**/*.mdx', '**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx', '**/*.json', '**/*.yaml', '**/*.yml']
   learnings:
-    scope: auto
+    scope: global
   issues:
-    scope: auto
+    scope: global
   jira:
-    usage: auto
+    usage: enabled
     project_keys: []
   linear:
-    usage: auto
+    usage: enabled
     team_keys: []
   pull_requests:
-    scope: auto
+    scope: global
 code_generation:
   docstrings:
     language: pt-BR
-    path_instructions: []
+    path_instructions:
+      - path: 'src/**'
+        instructions: 'Gere documentação em português brasileiro para componentes React'
+      - path: 'docs/**'
+        instructions: 'Mantenha consistência com o estilo da documentação existente'
   unit_tests:
-    path_instructions: []
+    enabled: true
+    path_instructions:
+      - path: 'src/**'
+        instructions: 'Crie testes unitários para componentes React usando Jest'
+      - path: '**/*.js'
+        instructions: 'Gere testes para funções utilitárias'
+annotations:
+  enabled: true
+  threshold: info
+  coverage_threshold: 80
+integrations:
+  github:
+    enabled: true
+    auto_merge:
+      enabled: true
+      conditions:
+        - reviews_required: 1
+        - status_checks_passed: true
+        - no_conflicts: true
+    branch_protection:
+      enabled: true
+      require_reviews: true
+      dismiss_stale_reviews: true
+      require_code_owner_reviews: true
+  webhooks:
+    enabled: true
+    events: ['pull_request', 'push', 'issues', 'pull_request_review']
+notifications:
+  email:
+    enabled: true
+    events: ['review_completed', 'security_issues', 'critical_errors']
+  slack:
+    enabled: true
+    webhook_url: ''
+    channels: ['#dev', '#code-review']
+workflow:
+  auto_merge:
+    enabled: true
+    strategy: squash
+    delete_branch: true
+    require_all_checks: true
+  auto_fix:
+    enabled: true
+    safe_changes_only: true
+    categories: ['formatting', 'imports', 'unused_variables']

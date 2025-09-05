@@ -12,7 +12,11 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "dev": "docusaurus start"
+    "dev": "docusaurus start",
+    "vercel:build": "yarn build && echo 'Build concluído com sucesso!'",
+    "vercel:dev": "vercel dev",
+    "postbuild": "echo 'Validando build...' && test -f build/index.html && echo 'Build validado com sucesso!'",
+    "lint:links": "docusaurus build --no-minify 2>&1 | grep -E 'Broken|ERROR' || echo 'Todos os links estão funcionando!'"
   },
   "dependencies": {
     "@docusaurus/core": "3.8.0",
